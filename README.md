@@ -7,8 +7,13 @@ Options will be updated by the time to time.
 
 What would you like to do?
    a - Install Docker
+   
    b - Install Terraform 0.14.11_linux_amd64
+   
    c - Install Ansible
+   
    d - Build or Destroy Ansible Environment
+   
    e - Build or Destroy Ansible Tower
+   
    f - Connect to a Docker Container to perform tasks

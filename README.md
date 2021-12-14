@@ -6,6 +6,7 @@ Options will be updated by the time to time.
 
 
 What would you like to do?
+
    a - Install Docker
    
    b - Install Terraform 0.14.11_linux_amd64

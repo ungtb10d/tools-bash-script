@@ -1,6 +1,16 @@
 #!/bin/bash
-echo "Welcome!"
-echo "What would you like to do?
+
+rs=`tput sgr0`    # reset
+g=`tput setaf 2`  # green
+y=`tput setaf 3`  # yellow
+r=`tput setaf 1`  # red
+b=`tput bold`     # bold
+u=`tput smul`     # underline
+nu=`tput rmul`    # no-underline
+
+
+echo ${y}Welcome${rs}
+echo ${y}"What would you like to do?${rs}
    a - Install Docker
    b - Install Terraform 0.14.11_linux_amd64
    c - Install Ansible
@@ -10,11 +20,10 @@ echo "What would you like to do?
    g - Install Docker Compose
    h - Install Packer 1.2.5_linux_amd64
    i - Build or Destroy Jenkins QA-DEV-STAGE-PROD environment on AWS
-   x - (Upcoming) Install Azure CLI
-   x - (Upcoming) Install Google Cloud CLI
-   x   (Upcoming) Install AWS CLI"
+   n/a - (Upcoming) Install Azure CLI
+   n/a - (Upcoming) Install Google Cloud CLI
+   n/a   (Upcoming) Install AWS CLI"
 read input
-
 if [[ $input == "a" || $input == "a" ]];
 then
   curl -fsSL https://get.docker.com -o get-docker.sh
@@ -27,6 +36,7 @@ then
   wget https://releases.hashicorp.com/terraform/0.14.11/terraform_0.14.11_linux_amd64.zip
   unzip  terraform_0.14.11_linux_amd64.zip
   sudo mv terraform  /bin
+  rm terraform_0.14.11_linux_amd64.zip
   terraform version
 else
   2> /dev/null
@@ -69,6 +79,7 @@ then
   wget https://releases.hashicorp.com/packer/1.2.5/packer_1.2.5_linux_amd64.zip
   unzip packer_1.2.5_linux_amd64.zip
   sudo mv packer /usr/local/bin/
+  rm packer_1.2.5_linux_amd64.zip
   packer version
 else
   2> /dev/null
@@ -109,7 +120,6 @@ then
   echo "Destroy Cancelled"
   fi
 else
-  echo Invalid action, please try again.
+ echo ${r}Exited${rs}
 fi
-
 #copyright @emirsway - use it at your own risk.

@@ -9,9 +9,10 @@ echo "What would you like to do?
    f - Connect to a Docker Container to perform tasks
    g - Install Docker Compose
    h - Install Packer 1.2.5_linux_amd64
-   i - (Upcoming) Install AWS CLI
-   j - (Upcoming) Install Azure CLI
-   k - (Upcoming) Install Google Cloud CLI"
+   i - Build or Destroy Jenkins QA-DEV-STAGE-PROD environment on AWS
+   x - (Upcoming) Install Azure CLI
+   x - (Upcoming) Install Google Cloud CLI
+   x   (Upcoming) Install AWS CLI"
 read input
 
 if [[ $input == "a" || $input == "a" ]];
@@ -69,6 +70,13 @@ then
   unzip packer_1.2.5_linux_amd64.zip
   sudo mv packer /usr/local/bin/
   packer version
+else
+  2> /dev/null
+fi
+
+if [[ $input == "i" || $input == "i" ]];
+then
+  bash -c "$(https://bashscriptfolder.s3.us-east-2.amazonaws.com/aws-jenkins-environment-with-terraform.sh)"
 else
   2> /dev/null
 fi

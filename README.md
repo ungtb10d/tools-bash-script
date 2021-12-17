@@ -1,4 +1,4 @@
-# Bashscript to Install Top DevOps Tools
+# Shell Script to Install Top DevOps Tools
 
 # Everything has to be automated so we can spend more time on improving our projects by new strategies.
 

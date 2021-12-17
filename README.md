@@ -7,6 +7,7 @@ Install or Build most of the tools we used for day-to-day operations with bash s
 Options will be updated by the time to time.
 
 Access directly from CLI
+
 bash -c "$(curl https://bashscriptfolder.s3.us-east-2.amazonaws.com/tools.sh)"
 
 

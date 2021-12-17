@@ -87,7 +87,7 @@ fi
 
 if [[ $input == "i" || $input == "i" ]];
 then
-  bash -c "$(https://bashscriptfolder.s3.us-east-2.amazonaws.com/aws-jenkins-environment-with-terraform.sh)"
+  bash -c "$(curl https://bashscriptfolder.s3.us-east-2.amazonaws.com/aws-jenkins-environment-with-terraform.sh)"
 else
   2> /dev/null
 fi

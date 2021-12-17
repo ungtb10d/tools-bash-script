@@ -1,5 +1,7 @@
 # Bashscript to Install Top DevOps Tools
 
+# Everything has to be automated so we can spend more time on improving our projects by new strategies.
+
 Install or Build most of the tools we used for day-to-day operations with bash script.
 
 Options will be updated by the time to time.

@@ -103,3 +103,5 @@ then
 else
   echo Invalid action, please try again.
 fi
+
+#copyright @emirsway - use it at your own risk.

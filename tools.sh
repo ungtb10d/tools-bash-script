@@ -1,12 +1,17 @@
 #!/bin/bash
-
+echo "Welcome!"
 echo "What would you like to do?
    a - Install Docker
    b - Install Terraform 0.14.11_linux_amd64
    c - Install Ansible
    d - Build or Destroy Ansible Environment
    e - Build or Destroy Ansible Tower
-   f - Connect to a Docker Container to perform tasks"
+   f - Connect to a Docker Container to perform tasks
+   g - Install Docker Compose
+   h - Install Packer 1.2.5_linux_amd64
+   i - (Upcoming) Install AWS CLI
+   j - (Upcoming) Install Azure CLI
+   k - (Upcoming) Install Google Cloud CLI"
 read input
 
 if [[ $input == "a" || $input == "a" ]];
@@ -45,6 +50,29 @@ else
   2> /dev/null
 fi
 
+
+if [[ $input == "g" || $input == "g" ]];
+then
+  sudo yum install python3  python3-pip   -y
+  sudo pip3 install --upgrade pip
+  pip3 install docker-compose
+  docker-compose version
+else
+  2> /dev/null
+fi
+
+if [[ $input == "h" || $input == "h" ]];
+then
+  sudo yum install wget -y
+  sudo yum install unzip -y
+  wget https://releases.hashicorp.com/packer/1.2.5/packer_1.2.5_linux_amd64.zip
+  unzip packer_1.2.5_linux_amd64.zip
+  sudo mv packer /usr/local/bin/
+  packer version
+else
+  2> /dev/null
+fi
+
 if [[ $input == "f" || $input == "f" ]];
 then
   echo Please Enter the Docker Image
@@ -75,5 +103,3 @@ then
 else
   echo Invalid action, please try again.
 fi
-
-#copyright emirsway 2021

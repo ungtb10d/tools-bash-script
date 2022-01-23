@@ -34,3 +34,5 @@ bash -c "$(curl https://bashscriptfolder.s3.us-east-2.amazonaws.com/tools.sh)"
    j - (Upcoming) Install Azure CLI
    
    k - (Upcoming) Install Google Cloud CLI"
+
+#copyright emirkoroglu - use it at your own risk. @emirsway

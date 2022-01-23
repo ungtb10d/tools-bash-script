@@ -1,4 +1,7 @@
+
 #!/bin/bash
+
+#copyright emirkoroglu - use it at your own risk. @emirsway
 
 rs=`tput sgr0`    # reset
 g=`tput setaf 2`  # green
@@ -8,7 +11,10 @@ b=`tput bold`     # bold
 u=`tput smul`     # underline
 nu=`tput rmul`    # no-underline
 
-
+echo Copyright -EmirKoroglu - use it at your own risk
+sleep 1
+echo Tools are for Redhat 7 - CentOS 7
+sleep 2
 echo ${y}Welcome${rs}
 echo ${y}"What would you like to do?${rs}
    a - Install Docker

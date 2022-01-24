@@ -28,5 +28,11 @@ bash -c "$(curl https://bashscriptfolder.s3.us-east-2.amazonaws.com/tools.sh)"
    g - Install Docker Compose
    
    h - Install Packer 1.2.5_linux_amd64
+   
+   j - Create a backup of /mnt /media /var folders in backup folder
+   
+   k - Find files over 1G and zip them
+  
+   l - Upgrade the Kernel
 
 #copyright emirkoroglu - use it at your own risk. @emirsway

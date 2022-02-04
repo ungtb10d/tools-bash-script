@@ -39,4 +39,4 @@ l - Upgrade the Kernel
 
 m - Run a Jenkins docker image with persistent volume folder attached
 
-#copyright emirkoroglu - use it at your own risk. @emirsway
+#copyright emirkoroglu - use it at your own risk. @emirkoroglu

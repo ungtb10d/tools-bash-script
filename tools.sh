@@ -9,25 +9,26 @@ b=`tput bold`     # bold
 u=`tput smul`     # underline
 nu=`tput rmul`    # no-underline
 
-echo Copyright -EmirKoroglu - use it at your own risk
+echo ${g}"Copyright -EmirKoroglu - use it at your own risk"${rs}
 sleep 1
-echo Tools are for Redhat 7 - CentOS 7
+echo ${b}"Tools are for Redhat 7 - CentOS 7"${rs}
 sleep 2
-echo ${y}Welcome${rs}
+echo ${y}Welcome!${rs}
 echo ${y}"What would you like to do?"${rs}
 echo "
-a - Install Docker
-b - Install Terraform 0.14.11_linux_amd64
-c - Install Ansible
-d - Build or Destroy Ansible Environment
-e - Build or Destroy Ansible Tower
-f - Connect to a Docker Container to perform tasks
-g - Install Docker Compose
-h - Install Packer 1.2.5_linux_amd64
-i - Build or Destroy Jenkins QA-DEV-STAGE-PROD environment on AWS
-j - Create a backup of /mnt /media /var folders in backup folder
-k - Find files over 1G and zip them
-l - Upgrade the Kernel
+${g}"a - Install Docker"${rs}
+${g}"b - Install Terraform 0.14.11_linux_amd64"${rs}
+${g}"c - Install Ansible"${rs}
+${g}"d - Build or Destroy Ansible Environment"${rs}
+${g}"e - Build or Destroy Ansible Tower"${rs}
+${g}"f - Connect to a Docker Container to perform tasks"${rs}
+${g}"g - Install Docker Compose"${rs}
+${g}"h - Install Packer 1.2.5_linux_amd64"${rs}
+${g}"i - Build or Destroy Jenkins QA-DEV-STAGE-PROD environment on AWS"${rs}
+${g}"j - Create a backup of /mnt /media /var folders in backup folder"${rs}
+${g}"k - Find files over 1G and zip them"${rs}
+${g}"l - Upgrade the Kernel"${rs}
+${g}"m - Run a Jenkins docker image with persistent volume folder attached"${rs}
 "
 read input
 if [[ $input == "a" || $input == "a" ]];
@@ -39,6 +40,8 @@ then
   systemctl status docker
 elif  [[ $input == "b" || $input == "b" ]];
 then
+  sudo yum install wget -y
+  sudo yum install unzip -y
   wget https://releases.hashicorp.com/terraform/0.14.11/terraform_0.14.11_linux_amd64.zip
   unzip  terraform_0.14.11_linux_amd64.zip
   sudo mv terraform  /bin
@@ -157,8 +160,23 @@ then
    else
      echo Destroy Cancelled
    fi
+elif  [[ $input == "m" || $input == "m" ]];
+then
+  echo Please wait for Docker installation...
+  curl -fsSL https://get.docker.com -o get-docker.sh
+  sudo sh get-docker.sh
+  sudo systemctl start docker
+  sudo systemctl enable docker
+  systemctl status docker
+  echo Docker installed Container will be running now
+  docker run -d -u root --name jenkins -p 50000:50000 -p 80:8080 -v /var/run/docker.sock:/var/run/docker.sock   -v /jenkins_backup:/var/jenkins_home  jenkins/jenkins
+  chmod 777 /jenkins_backup
+  docker ps
+  echo Please enter the running Jenkins Container ID to get the Jenkins initialAdminPassword
+  read JENKINSCONTAINERID
+  docker exec -it  $JENKINSCONTAINERID  cat  /var/jenkins_home/secrets/initialAdminPassword
 else
-  echo ${r}Exited${rs}
+  echo ${r}Exited, Goodbye! ${rs}
 fi
 
-#copyright @emirsway - use it at your own risk.
+#copyright @emirkoroglu - use it at your own risk.

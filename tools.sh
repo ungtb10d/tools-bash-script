@@ -169,12 +169,12 @@ then
   sudo systemctl enable docker
   systemctl status docker
   echo Docker installed Container will be running now
-  docker run -d -u root --name jenkins -p 50000:50000 -p 80:8080 -v /var/run/docker.sock:/var/run/docker.sock   -v /jenkins_backup:/var/jenkins_home  jenkins/jenkins
-  chmod 777 /jenkins_backup
-  docker ps
+  sudo docker run -d -u root --name jenkins -p 50000:50000 -p 80:8080 -v /var/run/docker.sock:/var/run/docker.sock   -v /jenkins_backup:/var/jenkins_home  jenkins/jenkins
+  sudo chmod 777 /jenkins_backup
+  sudo docker ps
   echo Please enter the running Jenkins Container ID to get the Jenkins initialAdminPassword
   read JENKINSCONTAINERID
-  docker exec -it  $JENKINSCONTAINERID  cat  /var/jenkins_home/secrets/initialAdminPassword
+  sudo docker exec -it  $JENKINSCONTAINERID  cat  /var/jenkins_home/secrets/initialAdminPassword
 else
   echo ${r}Exited, Goodbye! ${rs}
 fi

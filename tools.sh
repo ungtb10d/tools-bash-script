@@ -28,7 +28,7 @@ ${g}"i - Build or Destroy Jenkins QA-DEV-STAGE-PROD environment on AWS"${rs}
 ${g}"j - Create a backup of /mnt /media /var folders in backup folder"${rs}
 ${g}"k - Find files over 1G and zip them"${rs}
 ${g}"l - Upgrade the Kernel"${rs}
-${g}"m - Run a Jenkins docker image with persistent volume folder attached"${rs}
+${g}"m - Install Docker and Run a Jenkins docker image with persistent volume folder attached"${rs}
 "
 read input
 if [[ $input == "a" || $input == "a" ]];
@@ -171,6 +171,8 @@ then
   echo Docker installed Container will be running now
   sudo docker run -d -u root --name jenkins -p 50000:50000 -p 80:8080 -v /var/run/docker.sock:/var/run/docker.sock   -v /jenkins_backup:/var/jenkins_home  jenkins/jenkins
   sudo chmod 777 /jenkins_backup
+  echo container is starting please wait..
+  sleep 5
   sudo docker ps
   echo Please enter the running Jenkins Container ID to get the Jenkins initialAdminPassword
   read JENKINSCONTAINERID

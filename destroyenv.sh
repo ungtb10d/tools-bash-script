@@ -46,17 +46,17 @@ if [ $answer == "y" ]; then
             echo ${g}"Destroying environment $env_name starting"${rs}
             terragrunt destroy-all
         else
-            echo ${y}"Aborting"${rs}
+            echo ${y}"You have chosen to exit, Goodbye!"${rs}
         fi
     else
-        echo ${y}"Destroy Operation Cancelled"${rs}
+        echo ${y}"You have chosen to exit, Goodbye!"${rs}
     fi
     if [ $answer == "d" ]; then
         echo ${g}"Destroying environment $env_name starting"${rs}
         terragrunt destroy-all
     else
-        echo ${y}"Aborting"${rs}
+        echo ${y}"You have chosen to exit, Goodbye!"${rs}
     fi
 else
-    echo ${y}"Destroy Operation Cancelled"${rs}
+    echo ${y}"You have chosen to exit, Goodbye!"${rs}
 fi

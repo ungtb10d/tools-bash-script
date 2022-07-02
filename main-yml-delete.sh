@@ -3,7 +3,7 @@
 
 echo "Please run this code inside the switch_environments folder"
 git pull
-echo "Please type the Jira ticket number in this format PRODENG-0000"
+echo "Please type the Jira ticket number in this format DEPT-0000"
 read ticketnumber
 git checkout -b $ticketnumber
 echo "Please type the main.yml location for the environment"

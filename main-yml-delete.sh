@@ -23,5 +23,5 @@ if [ $answer == "y" ]; then
     git push --set-upstream origin $ticketnumber
     echo "Now please go to github and create a pull request from $ticketnumber to master"
 else
-    echo "Operation cancelled"
+    echo "You have chosen to exit, Goodbye!"
 fi

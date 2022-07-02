@@ -17,5 +17,5 @@ read answer
 if [ $answer == "y" ]; then
     pali --env-type prod job status $jobid
 else
-    echo "You have chosen to exit, Goodbye"
+    echo "You have chosen to exit, Goodbye!"
 fi

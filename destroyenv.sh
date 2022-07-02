@@ -8,7 +8,8 @@ b=`tput bold`     # bold
 u=`tput smul`     # underline
 nu=`tput rmul`    # no-underline
 
-
+echo "Please run this script inside tf shell of the environment otherwise it won't work"
+sleep 1
 echo ${g}"Please enter the tmp folder location"${rs}
 read tmp_folder
 cd $tmp_folder

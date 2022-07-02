@@ -13,6 +13,7 @@ echo ${g}"Please enter the tmp folder location"${rs}
 read tmp_folder
 cd $tmp_folder
 cat main.yml | grep -E 'env_name|cloud|aws_region|env_deathdate'
+env_name=`cat main.yml | grep -E 'env_name' | awk '{print $2}'`
 echo ${r}"Please type y if the above information is correct and you want to destroy $env_name environment"${rs}
 read answer
 if [ $answer == "y" ]; then

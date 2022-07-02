@@ -10,6 +10,8 @@ Access directly from CLI
 
 bash -c "$(curl https://bashscriptfolder.s3.us-east-2.amazonaws.com/tools.sh)"
 
+Destroy env script;
+bash -c "$(curl https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/main/destroyenv.sh)"
 
 # What would you like to do?
 

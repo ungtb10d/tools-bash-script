@@ -17,10 +17,11 @@ env_name=`cat main.yml | grep -E 'env_name' | awk '{print $2}'`
 echo ${r}"Please type y if the above information is correct and you want to destroy $env_name environment"${rs}
 read answer
 if [ $answer == "y" ]; then
-    echo ${y}"Running destroy plan to verify if environment $envname ready for destruction"${rs}
+    echo ${y}"Running destroy plan to verify if environment $env_name ready for destruction"${rs}
     sleep 1
     terragrunt plan-all -destroy
-    echo ${b}"If you see any error related to module please type y to replace the module provider in reporting and dgc folder"${rs}
+    echo ${b}"If you see any error related to module please type y to replace the module provider in reporting and dgc folder, otherwise to start
+    destroy operation please type d"${rs}
     read answer
     if [ $answer == "y" ]; then
         echo "Replacing provider, Please wait..."
@@ -41,13 +42,19 @@ if [ $answer == "y" ]; then
         echo ${r}"If you do not see any issues above please type y to destroy the environment, WARNING this will destroy the environment"${rs}
         read answer
         if [ $answer == "y" ]; then
-            echo ${g}"Destroying environment $envname starting"${rs}
+            echo ${g}"Destroying environment $env_name starting"${rs}
             terragrunt destroy-all
         else
             echo ${y}"Aborting"${rs}
         fi
     else
-        echo ${y}"Destroy Operation cancelled"${rs}
+        echo ${y}"Destroy Operation Cancelled"${rs}
+    fi
+    if [ $answer == "d" ]; then
+        echo ${g}"Destroying environment $env_name starting"${rs}
+        terragrunt destroy-all
+    else
+        echo ${y}"Aborting"${rs}
     fi
 else
     echo ${y}"Destroy Operation Cancelled"${rs}

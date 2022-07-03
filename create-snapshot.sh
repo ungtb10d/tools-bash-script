@@ -19,7 +19,7 @@ echo ${y}"Please type the environment name"${rs}
 read envname
 echo ${y}"Please wait snapshot is being created"${rs}
 pali --env-type prod --region $region env snapshot create --desc $ticketnumber $envname
-echo ${y}"Please enter the job id to check the status of snapshot"${rs}
+echo ${y}"Please enter the job id to check the status of snapshot creation"${rs}
 read jobid
 pali --env-type prod job status $jobid
 echo ${y}"Please type y to check the job status again"${rs}

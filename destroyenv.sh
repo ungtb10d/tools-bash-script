@@ -55,7 +55,7 @@ if [ $answer == "y" ]; then
         echo ${g}"Destroying environment $env_name starting"${rs}
         terragrunt destroy-all
     else
-        echo ${y}"You have chosen to exit, Goodbye!"${rs}
+        echo ${y}"Exited, Goodbye!"${rs}
     fi
 else
     echo ${y}"You have chosen to exit, Goodbye!"${rs}

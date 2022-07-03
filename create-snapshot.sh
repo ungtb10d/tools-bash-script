@@ -29,3 +29,6 @@ if [ $answer == "y" ]; then
 else
     echo ${g}"You have chosen to exit, Goodbye!"${rs}
 fi
+echo ${y}"If the job not completed you can check the status with below the command"${rs}
+echo ${y}"pali --env-type prod job status $jobid"${rs}
+echo ${y}"Exited, Goodbye"${rs}

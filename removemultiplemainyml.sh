@@ -33,7 +33,7 @@ if [ $answer == "y" ]; then
         echo ${y}"Commit successfully pushed."${rs}
         echo ${y}"Now please go to github and create a pull request from $ticketnumber to master"${rs}
     else
-        echo "You have chosen to exit, Goodbye!"
+          2> /dev/null
     fi
     if [ $answer == "a" ]; then
         echo "Please type the main.yml location for the environment"
@@ -56,7 +56,7 @@ if [ $answer == "y" ]; then
                 echo ${y}"Commit successfully pushed."${rs}
                 echo ${y}"Now please go to github and create a pull request from $ticketnumber to master"${rs}
             else
-                echo "You have chosen to exit, Goodbye!"
+                echo "Exited, Goodbye!"
             fi
         else
             2> /dev/null

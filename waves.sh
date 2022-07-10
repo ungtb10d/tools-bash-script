@@ -16,11 +16,11 @@ echo ${g}"a - Watch status of batch job"${rs}
 echo ${g}"b - Mark job completed"${rs}
 read answer
 if [ $answer == "a" ]; then
-    echo "What is the batch job id?"
+    echo ${y}"What is the batch job id?"${rs}
     read batchjobid
     watch -n 30 --color "pali --env-type prod job batch-status $batchjobid | grep -e TOTAL -e FAILED -e INVALID"
 elif [ $answer == "b" ]; then
-    echo "What is the job id?"
+    echo ${y}"What is the job id?"${rs}
     read jobid
     pali --env-type prod job mark-completed $jobid
 else

@@ -26,6 +26,12 @@ Delete multiple.yml then push to new branch.
 
 bash -c "$(curl https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/main/removemultiplemainyml.sh)"
 
+Monitor & mark job completed waves script
+
+bash -c "$(curl https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/main/waves.sh)"
+
+
+
 # What would you like to do?
 
 a - Install Docker

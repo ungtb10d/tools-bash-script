@@ -28,7 +28,7 @@ bash -c "$(curl https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/
 
 Remove 3 main.yml then push to new brach
 
-bash -c "$(https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/main/remove3mainyml.sh)"
+bash -c "$(curl https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/main/remove3mainyml.sh)"
 
 
 Monitor & mark job completed waves script

@@ -22,9 +22,14 @@ Delete main.yml then push to new branch
 
 bash -c "$(curl https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/main/main-yml-delete.sh)"
 
-Delete multiple.yml then push to new branch.
+Delete 2 multiple.yml then push to new branch.
 
 bash -c "$(curl https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/main/removemultiplemainyml.sh)"
+
+Remove 3 main.yml then push to new brach
+
+bash -c "$(https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/main/remove3mainyml.sh)"
+
 
 Monitor & mark job completed waves script
 

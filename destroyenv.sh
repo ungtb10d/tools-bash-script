@@ -48,16 +48,16 @@ if [ $answer == "y" ]; then
             echo ${g}"Destroying environment $env_name starting"${rs}
             terragrunt destroy-all
         else
-            echo ${y}"You have chosen to exit, Goodbye!"${rs}
+            2> /dev/null
         fi
     else
-        echo ${y}"You have chosen to exit, Goodbye!"${rs}
+        2> /dev/null
     fi
     if [ $answer == "d" ]; then
         echo ${g}"Destroying environment $env_name starting"${rs}
         terragrunt destroy-all
     else
-        echo ${y}"Exited, Goodbye!"${rs}
+        2> /dev/null
     fi
 else
     echo ${y}"You have chosen to exit, Goodbye!"${rs}

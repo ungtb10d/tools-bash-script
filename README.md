@@ -35,6 +35,10 @@ Monitor & mark job completed waves script
 
 bash -c "$(curl https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/main/waves.sh)"
 
+Upgrade DGC for single env
+
+bash -c "$(curl https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/main/upgrade-dgc.sh)"
+
 
 
 # What would you like to do?

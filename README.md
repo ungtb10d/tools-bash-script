@@ -22,6 +22,10 @@ Destroy env script;
 
 bash -c "$(curl https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/main/destroyenv.sh)"
 
+
+Secrets location
+bash -c "$(curl https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/main/secretslocation.sh)"
+
 Delete main.yml then push to new branch
 
 bash -c "$(curl https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/main/main-yml-delete.sh)"

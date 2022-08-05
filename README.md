@@ -12,7 +12,7 @@ bash -c "$(curl https://bashscriptfolder.s3.us-east-2.amazonaws.com/tools.sh)"
 
 Restart DGC
 
-https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/main/restart-dgc.sh
+bash -c "$(curl https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/main/restart-dgc.sh)"
 
 Create snapshot script
 

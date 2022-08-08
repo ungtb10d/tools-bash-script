@@ -28,6 +28,8 @@ if [ $answer == "y" ]; then
     git commit -m "removing main.yml after $ticketnumber"
     echo "Pushing the commit"
     git push --set-upstream origin $ticketnumber
+    git checkout master
+    git pull
     echo ${y}"Commit successfully pushed."${rs}
     echo ${y}"Now please go to github and create a pull request from $ticketnumber to master"${rs}
 

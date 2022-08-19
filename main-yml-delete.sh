@@ -9,6 +9,7 @@ u=`tput smul`     # underline
 nu=`tput rmul`    # no-underline
 
 echo "Please run this code inside the switch_environments folder"${rs}
+git checkout master
 git pull
 echo ${y}"Please type the Jira ticket number in this format DEPT-0000"${rs}
 read ticketnumber

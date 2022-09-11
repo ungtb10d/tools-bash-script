@@ -25,6 +25,10 @@ elif [ $answer == "b" ]; then
     echo ${y}"What is the job id?"${rs}
     read jobid
     pali --env-type prod job mark-completed $jobid
+else
+    2> /dev/null
+ #   echo ${g}"Exited"${rs}
+fi
 if [ $answer == "c" ]; then
     echo ${y}"What is the job id for retry?"${rs}
     read retryjob
@@ -34,5 +38,6 @@ elif [ $answer == "d" ]; then
     read singlejob
     pali --env-type prod job status $singlejob
 else
-    echo ${g}"Exited"${rs}
+    2> /dev/null
+ #   echo ${g}"Exited"${rs}
 fi

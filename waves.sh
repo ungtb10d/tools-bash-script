@@ -14,6 +14,8 @@ sleep 1
 echo ${g}"What would you like to do?"${rs}
 echo ${g}"a - Watch status of batch job"${rs}
 echo ${g}"b - Mark job completed"${rs}
+echo ${g}"c - Retry the job"${rs}
+echo ${g}"d - Watch status of single job"${rs}
 read answer
 if [ $answer == "a" ]; then
     echo ${y}"What is the batch job id?"${rs}
@@ -23,6 +25,14 @@ elif [ $answer == "b" ]; then
     echo ${y}"What is the job id?"${rs}
     read jobid
     pali --env-type prod job mark-completed $jobid
+if [ $answer == "c" ]; then
+    echo ${y}"What is the job id for retry?"${rs}
+    read retryjob
+    pali --env-type prod job retry $retryjob
+elif [ $answer == "d" ]; then
+    echo ${y}"What is the single job id?"${rs}
+    read singlejob
+    pali --env-type prod job status $singlejob
 else
     echo ${g}"Exited"${rs}
 fi

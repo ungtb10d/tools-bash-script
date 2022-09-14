@@ -29,7 +29,12 @@ user_records = get_list_cognito_users(
     cognito_idp_cliend = client,
     next_pagination_token = pagination_token,
     Limit = LIMIT
+<<<<<<< HEAD
+)
+
+=======
     )
+>>>>>>> 1a5324866eb5f0bf772f0737d0cbe3b0a90163d4
 # Print out result
 def  datetimeconverter(o):
         if isinstance(o, datetime.datetime): 

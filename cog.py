@@ -31,7 +31,7 @@ user_records = get_list_cognito_users(
     Limit = LIMIT
 
 # Print out result
-def datetimeconverter(o):
+def  datetimeconverter(o):
         if isinstance(o, datetime.datetime): 
             return str(o)
   

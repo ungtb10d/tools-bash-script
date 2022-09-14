@@ -22,23 +22,19 @@ def get_list_cognito_users(cognito_idp_client, next_pagination_token ='', Limit 
         UserPoolId = USER_POOL_ID,
         #AttributesToGet = ['name'],
         Limit = Limit
-     )
+    )
   
 # Pull Batch of Amazon Cognito User Pool records  
 user_records = get_list_cognito_users(
     cognito_idp_cliend = client,
     next_pagination_token = pagination_token,
     Limit = LIMIT
-<<<<<<< HEAD
 )
 
-=======
-    )
->>>>>>> 1a5324866eb5f0bf772f0737d0cbe3b0a90163d4
 # Print out result
-def  datetimeconverter(o):
-        if isinstance(o, datetime.datetime): 
-            return str(o)
+def datetimeconverter(o):
+    if isinstance(o, datetime.datetime):
+        return str(o)
   
 json_formatted_str = json.dumps(user_records, indent=4, default=datetimeconverter)
 print(json_formatted_str)  

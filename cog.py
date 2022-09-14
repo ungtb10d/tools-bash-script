@@ -1,5 +1,6 @@
 import boto3
 import datetime
+import json
 
 # Amazon Cognito User Pool Configs
 LIMIT = 60
@@ -26,7 +27,7 @@ def get_list_cognito_users(cognito_idp_client, next_pagination_token ='', Limit 
   
 # Pull Batch of Amazon Cognito User Pool records  
 user_records = get_list_cognito_users(
-    cognito_idp_cliend = client,
+    cognito_idp_client = client,
     next_pagination_token = pagination_token,
     Limit = LIMIT
 )

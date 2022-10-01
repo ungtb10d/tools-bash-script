@@ -11,9 +11,9 @@ nu=`tput rmul`    # no-underline
 echo "Please run this code inside the switch_environments folder"${rs}
 git checkout master
 git pull
-echo ${y}"Please type the Jira ticket number in this format DEPT-0000"${rs}
+echo ${y}"Please type the Jira ticket number ONLY..No need to type PRODENG"${rs}
 read ticketnumber
-git checkout -b $ticketnumber
+git checkout -b PRODENG-$ticketnumber
 echo ${y}"Please type the main.yml location for the environment"${rs}
 read mainyml
 cat $mainyml | grep -E 'env_name|cloud|aws_region|env_deathdate'

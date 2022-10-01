@@ -1,0 +1,6 @@
+decisions
+edc
+edc-dev
+xant
+borsaitaliana
+borsaitaliana-dev

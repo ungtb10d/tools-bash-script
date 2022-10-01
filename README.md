@@ -44,6 +44,9 @@ Upgrade DGC for single env
 bash -c "$(curl https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/main/upgrade-dgc.sh)"
 
 
+Get license expiration dates
+
+bash -c "$(curl https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/main/checkenvlicense.sh)"
 
 # What would you like to do?
 

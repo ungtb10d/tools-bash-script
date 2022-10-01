@@ -50,7 +50,7 @@ bash -c "$(curl https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/
 
 Destroy envs
 
-bash -c "$(curl https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/main/envidmain.sh)"
+bash -c "$(curl https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/main/fordestroyenvidmain.sh)"
 
 
 Get Env ids batch job

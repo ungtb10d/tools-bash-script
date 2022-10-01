@@ -1,5 +1,5 @@
 
-echo "Getting the "
+echo "Getting the environments list "
 curl https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/main/destroyenv.txt >> test.txt
 echo "Environments received. Gathering informations"
 while read p; do

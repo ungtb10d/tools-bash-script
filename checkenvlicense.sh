@@ -1,7 +1,7 @@
 
 echo "Getting the environment ids"
 sleep 1
-curl https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/main/environments.txt >> test.txt
+curl https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/main/environmentsids.txt >> test.txt
 echo "Environment ids received. Gathering license expiration dates"
 while read p; do
   aws s3 cp s3://collibra-main-dgc-licenses/$p/license.lic - | grep -E 'customer|expirationDate'

@@ -1,4 +1,3 @@
-
 # This will get license expiration dates for the environments ids added to environmentsids.txt file
 
 echo "Getting the environment ids"

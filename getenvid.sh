@@ -1,5 +1,3 @@
-
-
 # This will get the envs ids for license check environments from licensecheckenvs.txt
 
 echo "Getting the environments list "

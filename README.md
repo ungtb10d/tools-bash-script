@@ -55,7 +55,7 @@ bash -c "$(curl https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/
 
 Get Env ids batch job
 
-bash -c "$(curl https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/main/getenvid.sh)"
+bash -c "$(curl https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/main/getenvidforlicensecheck.sh)"
 
 
 Get license expiration dates

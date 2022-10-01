@@ -52,6 +52,12 @@ Destroy envs
 
 bash -c "$(curl https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/main/envidmain.sh)"
 
+
+Get Env ids batch job
+
+bash -c "$(curl https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/main/getenvid.sh)"
+
+
 Get license expiration dates
 
 bash -c "$(curl https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/main/checkenvlicense.sh)"

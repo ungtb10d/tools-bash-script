@@ -48,6 +48,10 @@ Get Ansible env id
 bash -c "$(curl https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/main/envidmain.sh)"
 
 
+Destroy envs
+
+bash -c "$(curl https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/main/envidmain.sh)"
+
 Get license expiration dates
 
 bash -c "$(curl https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/main/checkenvlicense.sh)"

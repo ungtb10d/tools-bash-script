@@ -26,13 +26,13 @@ if [ $answer == "y" ]; then
     echo "Adding the commit"
     git add .
     echo "Committing the changes"
-    git commit -m "removing main.yml after $ticketnumber"
+    git commit -m "removing main.yml after PRODENG-$ticketnumber"
     echo "Pushing the commit"
-    git push --set-upstream origin $ticketnumber
+    git push --set-upstream origin PRODENG-$ticketnumber
     git checkout master
     git pull
     echo ${y}"Commit successfully pushed."${rs}
-    echo ${y}"Now please go to github and create a pull request from $ticketnumber to master"${rs}
+    echo ${y}"Now please go to github and create a pull request from PRODENG-$ticketnumber to master"${rs}
 
 else
     echo "You have chosen to exit, Goodbye!"

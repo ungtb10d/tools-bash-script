@@ -43,6 +43,10 @@ Upgrade DGC for single env
 
 bash -c "$(curl https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/main/upgrade-dgc.sh)"
 
+Get Ansible env id
+
+bash -c "$(curl https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/main/envidmain.sh)"
+
 
 Get license expiration dates
 

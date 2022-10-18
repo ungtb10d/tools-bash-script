@@ -13,12 +13,12 @@ nu=`tput rmul`    # no-underline
 echo ${r}"Please run this code inside the pali-client folder"${rs}
 echo ${y}"Please type the region of the environment you want to create a snapshot of"${rs}
 read region
-echo ${y}"Please ONLY type the Jira ticket number for the PRODENG department"${rs}
+echo ${y}"Please type the Jira ticket number in this format PRODENG-1111"${rs}
 read ticketnumber
 echo ${y}"Please type the environment name"${rs}
 read envname
 echo ${y}"Please wait snapshot is being created"${rs}
-pali --env-type prod --region $region env snapshot create --desc PRODENG-$ticketnumber $envname
+pali --env-type prod --region $region env snapshot create --desc $ticketnumber $envname
 echo ${y}"Please enter the job id to check the status of snapshot creation"${rs}
 read jobid
 pali --env-type prod job status $jobid

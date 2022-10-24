@@ -57,6 +57,10 @@ Get Env ids batch job
 
 bash -c "$(curl https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/main/getenvidforlicensecheck.sh)"
 
+Ssh to nodes
+
+bash -c "$(curl https://raw.githubusercontent.com/emirkoroglu/tools-bash-script/main/sshtonode.sh)"
+
 
 Get license expiration dates
 

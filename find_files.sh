@@ -21,10 +21,12 @@ if [ $answer == "yes" ]; then
     find $folder* -mtime +$number -exec rm {} \;
     echo ${g}"Files in $folder older than $number days have been removed"${rs}
     sleep 1
-    echo ${u}"Please type yes to verify that no files exist older than $number days in the $folder choosed"{rs}
+    echo ${u}"Please type yes to verify that no files exist older than $number days in the $folder choosed"${rs}
     read yes
     if [ $answer == "yes" ]; then
        find $folder -mtime +$number -print
+       echo ${b}"Above output will be empty if no files exists more than $number days in the folder"${rs}
+       echo ${b}"Goodbye!"${rs}
     else
        2> /dev/null
     fi

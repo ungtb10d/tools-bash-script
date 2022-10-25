@@ -15,7 +15,7 @@ if [ $answer == "yes" ]; then
     if [ $answer == "yes" ]; then
     find $folder -mtime +$number -print
     else
-    2> /dev/null
+       2> /dev/null
     fi
 else
     echo "You have chosen to exit, Goodbye!"

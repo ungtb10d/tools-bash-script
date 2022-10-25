@@ -25,7 +25,8 @@ if [ $answer == "yes" ]; then
     read yes
     if [ $answer == "yes" ]; then
        find $folder -mtime +$number -print
-       echo ${b}"Above output will be empty if no files exists more than $number days in the $folder"${rs}
+       echo ${g}"Above output will be empty if no files exists more than $number days in the $folder"${rs}
+       sleep 1
        echo ${b}"Goodbye!"${rs}
     else
        2> /dev/null

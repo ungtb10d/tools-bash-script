@@ -16,7 +16,7 @@ read number
 echo ${r}"Are you sure you want to delete files from $folder older than $number days? Please type yes to continue"${rs}
 read answer
 if [ $answer == "yes" ]; then
-    echo ${g}"Remove operation in progress, Please wait..."${rs}
+    echo ${y}"Remove operation in progress, Please wait..."${rs}
     sleep 2
     find $folder* -mtime +$number -exec rm {} \;
     echo ${g}"Files in $folder older than $number days have been removed"${rs}

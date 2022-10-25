@@ -13,7 +13,7 @@ if [ $answer == "yes" ]; then
     echo "Files in $folder older than $number days have been removed"
     echo "Please type yes to verify that no files exist older than $number days in the folder"
     if [ $answer == "yes" ]; then
-    find $folder -mtime +$number -print
+       find $folder -mtime +$number -print
     else
        2> /dev/null
     fi

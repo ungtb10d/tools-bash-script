@@ -56,7 +56,7 @@ if [ $answer == "y" ]; then
     if [ $answer == "d" ]; then
         echo ${g}"Destroying environment $env_name starting"${rs}
         terragrunt destroy-all
-        echo "Type y to apply TF_VAR_force_destroy_backup_bucket=true for GCP envs"
+        echo ${g}"Type y to apply TF_VAR_force_destroy_backup_bucket=true for GCP envs"${rs}
         read answer
         if [ $answer == "y" ]; then
             cd $tmp_folder/dgc

@@ -47,15 +47,6 @@ if [ $answer == "y" ]; then
         if [ $answer == "y" ]; then
             echo ${g}"Destroying environment $env_name starting"${rs}
             terragrunt destroy-all
-            echo "Type y to apply TF_VAR_force_destroy_backup_bucket=true for GCP envs"
-            read answer
-            if [ $answer == "y" ]; then
-                TF_VAR_force_destroy_backup_bucket=true terragrunt apply -target google_storage_bucket.backup-bucket
-                echo "Do not forget to deactive and delete IAM Access for the environment in AWS after that run the script again to destroy the bucket"
-                echo "This is how you search for the IAM user for the env  user-gcp-$ {env_id}-tmp"
-            else
-                2> /dev/null
-            fi
         else
             2> /dev/null
         fi
@@ -65,6 +56,24 @@ if [ $answer == "y" ]; then
     if [ $answer == "d" ]; then
         echo ${g}"Destroying environment $env_name starting"${rs}
         terragrunt destroy-all
+        echo "Type y to apply TF_VAR_force_destroy_backup_bucket=true for GCP envs"
+        read answer
+        if [ $answer == "y" ]; then
+            TF_VAR_force_destroy_backup_bucket=true terragrunt apply -target google_storage_bucket.backup-bucket
+            echo ${g}"Do not forget to deactive and delete IAM Access for the environment in AWS, after that run the script again to destroy the bucket"${rs}
+            sleep 1
+            echo "This is how you search for the IAM user for the env  user-gcp-{env_id}-tmp"
+            sleep 1
+            echo ${g}"Please type y if you removed the IAM access for the environment and destroy operation will start"${rs}
+            read answer
+            if [ $answer == "y" ]; then
+                terragrunt destroy-all
+            else
+                2> /dev/null
+            fi
+        else
+            2> /dev/null
+        fi
     else
         2> /dev/null
     fi

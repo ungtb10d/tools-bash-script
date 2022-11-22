@@ -59,6 +59,7 @@ if [ $answer == "y" ]; then
         echo "Type y to apply TF_VAR_force_destroy_backup_bucket=true for GCP envs"
         read answer
         if [ $answer == "y" ]; then
+            cd $tmp_folder/dgc
             TF_VAR_force_destroy_backup_bucket=true terragrunt apply -target google_storage_bucket.backup-bucket
             echo ${g}"Do not forget to deactive and delete IAM Access for the environment in AWS, after that run the script again to destroy the bucket"${rs}
             sleep 1
